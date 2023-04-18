@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Prometheus.Api.Models
 {
@@ -8,6 +9,7 @@ namespace Prometheus.Api.Models
         [Key]
         public int Id { get; set; }
 
+        [ForeignKey("Customer")]
         public int CustomerId { get; set; }
 
         [Required]

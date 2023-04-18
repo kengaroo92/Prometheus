@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json;
 
 namespace Prometheus.Api.Models
@@ -10,8 +11,10 @@ namespace Prometheus.Api.Models
         [Key]
         public int Id { get; set; }
 
+        [ForeignKey("Customer")]
         public int CustomerId { get; set; }
 
+        [ForeignKey("Project")]
         public int ProjectId { get; set; }
 
         // The Required attribute is used to mark a property as required.
