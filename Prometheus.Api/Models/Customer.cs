@@ -14,7 +14,7 @@ namespace Prometheus.Api.Models
 
         [Required]
         [MaxLength(50)]
-        public string Type { get; set; } // individual or company
+        public string Type { get; set; } // Individual or Company
 
         [MaxLength(255)]
         public string Email { get; set; }
@@ -28,7 +28,7 @@ namespace Prometheus.Api.Models
         public string Notes { get; set; }
 
         // The ICollection<Project> represents a collection of Projects that belong to a Customer. This is a navigation property representing the relationsip between a Customer and their Projects.
-        // The ICollection<T> interaces allows for adding, removing, and enumerating items in the collection, as well as allowing a count of items.
+        // The ICollection<T> interface allows for adding, removing, and enumerating items in the collection, as well as allowing a count of items.
         public virtual ICollection<Project> Projects { get; set; }
     }
 }
