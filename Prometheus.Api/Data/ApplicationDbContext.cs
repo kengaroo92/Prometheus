@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Prometheus.Api.Models;
 
+// DbContext responsible for connecting to the PostgreSQL database.
 namespace Prometheus.Api.Data
 {
     public class ApplicationDbContext : DbContext
